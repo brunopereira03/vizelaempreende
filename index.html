@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vizela Empreende · OPJ 2026</title>
+<meta name="description" content="Um espaço para ideias, projetos e futuro. Vota Vizela Empreende no Orçamento Participativo Jovem 2026." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vizela Empreende" />
+<meta property="og:description" content="Um espaço para ideias, projetos e futuro. Vota Vizela Empreende." />
+<meta property="og:image" content="img-cta.jpg" />
+<meta property="og:type" content="website" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" />
+
+<!-- Typography: Poppins matches the campaign visuals exactly -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ====== Reset ====== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--navy);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+/* ====== Tokens (sampled from the campaign images) ====== */
+:root {
+  --navy:       #0F1F44;
+  --navy-deep:  #08153A;
+  --teal:       #14B5B0;
+  --teal-bright:#1DC8C2;
+  --teal-soft:  #B8E8E6;
+  --bg:         #FFFFFF;
+  --bg-soft:    #F5FAFA;
+  --line:       #E5ECEF;
+  --text-dim:   #5A6B82;
+
+  --pad-x: clamp(1.25rem, 5vw, 4rem);
+  --section-y: clamp(4rem, 9vw, 7rem);
+  --max: 1240px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::selection { background: var(--teal); color: white; }
+
+/* ====== Container ====== */
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad-x); }
+
+/* ====== Top Nav ====== */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem var(--pad-x);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .4s var(--ease);
+}
+.nav.is-scrolled { border-bottom-color: var(--line); }
+.nav__logo { display: block; height: 36px; }
+.nav__logo img { height: 100%; width: auto; }
+.nav__cta {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: var(--teal);
+  color: var(--navy);
+  padding: .7rem 1.3rem .7rem 1.4rem;
+  font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+  border-radius: 10px;
+  transition: background .25s var(--ease), transform .25s var(--ease);
+  box-shadow: 0 4px 0 var(--navy);
+}
+.nav__cta:hover { background: var(--teal-bright); transform: translateY(-1px); box-shadow: 0 5px 0 var(--navy); }
+.nav__cta:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--navy); }
+.nav__cta-arrow { font-size: 1rem; line-height: 1; }
+@media (max-width: 480px) {
+  .nav__logo { height: 28px; }
+  .nav__cta { padding: .55rem 1rem; font-size: .72rem; }
+}
+
+/* ====== Hero ====== */
+.hero {
+  padding-top: clamp(6rem, 12vw, 9rem);
+  padding-bottom: var(--section-y);
+  position: relative; overflow: hidden;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+@media (min-width: 880px) { .hero__grid { grid-template-columns: 1fr 1fr; } }
+
+.hero__text { animation: fadeUp .9s var(--ease) both .1s; }
+.hero__kicker {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+}
+.hero__kicker::before { content: ""; width: 24px; height: 2px; background: var(--teal); }
+
+.hero__title {
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+}
+.hero__title em {
+  font-style: normal;
+  color: var(--teal);
+}
+.hero__sub {
+  margin-top: 1.4rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--text-dim);
+  max-width: 30ch;
+  font-weight: 400;
+  line-height: 1.55;
+}
+.hero__cta-row {
+  margin-top: clamp(2rem, 4vw, 2.8rem);
+  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .7rem;
+  background: var(--teal);
+  color: var(--navy);
+  padding: 1.1rem 1.9rem;
+  font-size: .88rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  border-radius: 14px;
+  box-shadow: 0 5px 0 var(--navy);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--navy);
+  background: var(--teal-bright);
+}
+.btn-primary:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--navy); }
+.btn-primary svg { width: 16px; height: 16px; }
+
+.btn-ghost {
+  font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--navy);
+  border-bottom: 2px solid var(--teal);
+  padding-bottom: 3px;
+  transition: color .2s, border-color .2s;
+}
+.btn-ghost:hover { color: var(--teal); }
+
+.hero__image {
+  animation: fadeUp 1s var(--ease) both .35s;
+}
+.hero__image img {
+  width: 100%; height: auto; border-radius: 18px;
+  box-shadow: 0 30px 60px -25px rgba(15, 31, 68, 0.25);
+}
+
+/* ====== Section base ====== */
+.section { padding-block: var(--section-y); position: relative; scroll-margin-top: 80px; }
+.section--soft { background: var(--bg-soft); }
+.section--dark { background: var(--navy); color: white; }
+
+.section__head {
+  max-width: 44rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.kicker {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--teal);
+}
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+.section--dark .kicker { color: var(--teal-bright); }
+
+.section__title {
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.05; letter-spacing: -0.02em;
+  color: inherit;
+}
+.section__title em {
+  font-style: normal;
+  color: var(--teal);
+}
+.section--dark .section__title em { color: var(--teal-bright); }
+
+/* ====== Image showcase (single full image) ====== */
+.showcase {
+  display: flex; justify-content: center;
+}
+.showcase__frame {
+  max-width: 760px; width: 100%;
+  border-radius: 22px; overflow: hidden;
+  background: white;
+  box-shadow: 0 40px 80px -30px rgba(15, 31, 68, 0.3),
+              0 0 0 1px var(--line);
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.showcase__frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 50px 90px -25px rgba(15, 31, 68, 0.35),
+              0 0 0 1px var(--line);
+}
+.showcase__frame img { width: 100%; display: block; }
+
+/* ====== Split layout (image one side, supporting bits other) ====== */
+.split {
+  display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 880px) { .split { grid-template-columns: 1fr 1fr; } }
+.split--reverse .split__image { order: 1; }
+@media (min-width: 880px) {
+  .split--reverse .split__image { order: 2; }
+  .split--reverse .split__text { order: 1; }
+}
+.split__image {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 30px 70px -25px rgba(15, 31, 68, 0.3),
+              0 0 0 1px var(--line);
+}
+.split__image img { width: 100%; display: block; }
+.split__title {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.08; letter-spacing: -0.02em;
+  color: inherit;
+}
+.split__title em { font-style: normal; color: var(--teal); }
+.split--dark .split__title em { color: var(--teal-bright); }
+.split__sub {
+  margin-top: 1rem;
+  font-size: 1rem; color: var(--text-dim);
+  font-weight: 400;
+  max-width: 32ch;
+}
+.split--dark .split__sub { color: rgba(255,255,255,0.7); }
+
+/* ====== Activity chips (under atividades image) ====== */
+.chips {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .6rem 1.1rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid var(--line);
+  font-size: .85rem; font-weight: 600;
+  color: var(--navy);
+  transition: border-color .25s, background .25s, transform .25s;
+}
+.chip:hover {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  transform: translateY(-2px);
+}
+.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+
+/* ====== Vote section (final CTA) ====== */
+.final {
+  background: var(--navy);
+  color: white;
+  position: relative; overflow: hidden;
+}
+.final::before {
+  content: ""; position: absolute; top: -30%; right: -10%;
+  width: 60%; height: 120%;
+  background: radial-gradient(circle, rgba(20, 181, 176, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.final__wrap { position: relative; z-index: 1; text-align: center; max-width: 52rem; margin: 0 auto; }
+.final__title {
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.02; letter-spacing: -0.025em;
+  color: white;
+}
+.final__title em { font-style: normal; color: var(--teal-bright); }
+.final__sub {
+  margin-top: 1.3rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  max-width: 28rem; margin-inline: auto;
+}
+.final__cta {
+  display: inline-flex; align-items: center; gap: .7rem;
+  background: var(--teal);
+  color: var(--navy-deep);
+  padding: 1.3rem 2.3rem;
+  font-size: 1rem; font-weight: 800; letter-spacing: .04em;
+  border-radius: 16px;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  box-shadow: 0 6px 0 #0A8B87, 0 12px 40px rgba(20, 181, 176, 0.4);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+}
+.final__cta:hover {
+  background: var(--teal-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #0A8B87, 0 16px 50px rgba(20, 181, 176, 0.5);
+}
+.final__cta:active { transform: translateY(4px); box-shadow: 0 2px 0 #0A8B87, 0 8px 30px rgba(20, 181, 176, 0.4); }
+.final__cta svg { width: 18px; height: 18px; }
+
+.final__info {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+@media (max-width: 720px) { .final__info { grid-template-columns: 1fr; gap: 1.5rem; } }
+.final__info-item { text-align: center; }
+.final__info-label {
+  font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal-bright);
+}
+.final__info-value {
+  margin-top: .55rem;
+  font-weight: 800; font-size: 1.05rem; color: white;
+}
+.final__info-detail {
+  margin-top: .25rem;
+  font-size: .85rem; color: rgba(255, 255, 255, 0.55);
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2.2rem var(--pad-x);
+  font-size: .8rem;
+}
+.footer__wrap {
+  max-width: var(--max); margin-inline: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.footer__logo { height: 28px; }
+.footer__logo img { height: 100%; width: auto; }
+
+/* ====== Reveal animation ====== */
+[data-reveal] {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .9s var(--ease), transform .9s var(--ease);
+}
+[data-reveal].is-visible { opacity: 1; transform: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="Vizela Empreende — início">
+    <img src="logo.png" alt="Vizela Empreende" />
+  </a>
+  <a href="#votar" class="nav__cta">Vota <span class="nav__cta-arrow">›</span></a>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="hero__kicker">OPJ 2026</span>
+        <h1 class="hero__title">Cria <em>mais</em>.<br/>Em Vizela.</h1>
+        <p class="hero__sub">Vota a proposta que dá aos jovens o espaço que sempre lhes faltou.</p>
+        <div class="hero__cta-row">
+          <a href="#votar" class="btn-primary">
+            Vota Vizela Empreende
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#pergunta" class="btn-ghost">Ver proposta</a>
+        </div>
+      </div>
+      <figure class="hero__image">
+        <img src="img-hero.jpg" alt="Vizela Empreende — um espaço para ideias, projetos e futuro" />
+      </figure>
+    </div>
+  </div>
+</header>
+
+<!-- ============== PERGUNTA ============== -->
+<section class="section section--soft" id="pergunta">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="kicker">A pergunta</span>
+    </div>
+    <div class="showcase" data-reveal>
+      <figure class="showcase__frame">
+        <img src="img-pergunta.jpg" alt="Onde podem os jovens de Vizela criar mais?" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ATIVIDADES ============== -->
+<section class="section" id="atividades">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="kicker">O espaço</span>
+      <h2 class="section__title">O que pode acontecer <em>aqui</em>.</h2>
+    </div>
+    <div class="showcase" data-reveal>
+      <figure class="showcase__frame">
+        <img src="img-atividades.jpg" alt="IA, eSports, Conteúdos, Workshops" />
+      </figure>
+    </div>
+    <div class="chips" data-reveal>
+      <span class="chip"><span class="chip__dot"></span>IA</span>
+      <span class="chip"><span class="chip__dot"></span>eSports</span>
+      <span class="chip"><span class="chip__dot"></span>Conteúdos</span>
+      <span class="chip"><span class="chip__dot"></span>Workshops</span>
+      <span class="chip"><span class="chip__dot"></span>Projetos</span>
+      <span class="chip"><span class="chip__dot"></span>Comunidade</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PARA QUEM ============== -->
+<section class="section section--soft" id="quem">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="kicker">A quem serve</span>
+    </div>
+    <div class="showcase" data-reveal>
+      <figure class="showcase__frame">
+        <img src="img-pessoas.jpg" alt="Um espaço para jovens, escolas e associações" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== VÍDEO ============== -->
+<section class="section" id="video">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Brevemente</span>
+      <h2 class="section__title">Vídeo de <em>apresentação</em>.</h2>
+    </div>
+    <div class="showcase" data-reveal>
+      <figure class="showcase__frame">
+        <img src="img-video.jpg" alt="Vídeo de apresentação — em breve" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="section final" id="votar">
+  <div class="wrap final__wrap">
+    <span class="kicker" data-reveal>Chamada à ação</span>
+    <h2 class="final__title" data-reveal>O teu voto pode <em>criar este espaço</em>.</h2>
+    <p class="final__sub" data-reveal>A tua escolha faz a diferença.</p>
+
+    <a href="#" class="final__cta" data-reveal>
+      Vota Vizela Empreende
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+
+    <div class="final__info">
+      <div class="final__info-item" data-reveal>
+        <div class="final__info-label">Quem</div>
+        <div class="final__info-value">Jovens 12 — 30</div>
+        <p class="final__info-detail">Vives, estudas ou és de Vizela.</p>
+      </div>
+      <div class="final__info-item" data-reveal>
+        <div class="final__info-label">Onde</div>
+        <div class="final__info-value">Online · Escolas</div>
+        <p class="final__info-detail">Formulário oficial e urnas.</p>
+      </div>
+      <div class="final__info-item" data-reveal>
+        <div class="final__info-label">Quando</div>
+        <div class="final__info-value">OPJ 2026</div>
+        <p class="final__info-detail">Durante o período oficial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="footer__wrap">
+    <div class="footer__logo"><img src="logo_white.png" alt="Vizela Empreende" /></div>
+    <div>Proposta de Bruno Pereira, Francisco Pereira e Marco Monteiro · OPJ 2026</div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveals
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+// Nav scroll state
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 16);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+</script>
+
+</body>
+</html>
