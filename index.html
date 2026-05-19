@@ -3,25 +3,85 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vizela Empreende · OPJ 2026</title>
-<meta name="description" content="Um espaço para ideias, projetos e futuro. Vota Vizela Empreende no Orçamento Participativo Jovem 2026." />
 
-<!-- Open Graph -->
-<meta property="og:title" content="Vizela Empreende" />
-<meta property="og:description" content="Um espaço para ideias, projetos e futuro. Vota Vizela Empreende." />
-<meta property="og:image" content="img-cta.jpg" />
+<!-- ====== PRIMARY SEO ====== -->
+<title>Vizela Empreende · Vota OPJ 2026 — Um espaço para criar em Vizela</title>
+<meta name="description" content="Vota Vizela Empreende no Orçamento Participativo Jovem 2026. Uma proposta para criar um espaço onde jovens, escolas e associações de Vizela aprendem, criam e experimentam." />
+<meta name="keywords" content="Vizela Empreende, Orçamento Participativo Jovem, OPJ 2026, Vizela, jovens, espaço jovem, Bruno Pereira, Francisco Pereira, Marco Monteiro" />
+<meta name="author" content="Bruno Pereira, Francisco Pereira, Marco Monteiro" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://vizelaempreende.pt/" />
+<meta name="theme-color" content="#0F1F44" />
+
+<!-- ====== OPEN GRAPH ====== -->
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_PT" />
+<meta property="og:site_name" content="Vizela Empreende" />
+<meta property="og:url" content="https://vizelaempreende.pt/" />
+<meta property="og:title" content="Vizela Empreende — Vota OPJ 2026" />
+<meta property="og:description" content="Um espaço novo para jovens, escolas e associações criarem mais em Vizela. Vota a proposta no Orçamento Participativo Jovem 2026." />
+<meta property="og:image" content="https://vizelaempreende.pt/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Vizela Empreende — Cria mais. Em Vizela. Vota no OPJ 2026." />
 
-<!-- Favicon -->
+<!-- ====== TWITTER / X CARD ====== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vizela Empreende — Vota OPJ 2026" />
+<meta name="twitter:description" content="Um espaço novo para jovens, escolas e associações criarem mais em Vizela." />
+<meta name="twitter:image" content="https://vizelaempreende.pt/og-image.jpg" />
+
+<!-- ====== FAVICON ====== -->
 <link rel="icon" type="image/png" href="logo.png" />
+<link rel="apple-touch-icon" href="logo.png" />
 
-<!-- Typography: Poppins matches the campaign visuals exactly -->
+<!-- ====== STRUCTURED DATA (JSON-LD) ====== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vizelaempreende.pt/#website",
+      "url": "https://vizelaempreende.pt/",
+      "name": "Vizela Empreende",
+      "description": "Proposta ao Orçamento Participativo Jovem de Vizela 2026.",
+      "inLanguage": "pt-PT"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vizelaempreende.pt/#webpage",
+      "url": "https://vizelaempreende.pt/",
+      "name": "Vizela Empreende — Vota OPJ 2026",
+      "isPartOf": { "@id": "https://vizelaempreende.pt/#website" },
+      "inLanguage": "pt-PT",
+      "description": "Um espaço novo para jovens, escolas e associações criarem mais em Vizela."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Vizela Empreende",
+      "description": "Proposta para a criação de um espaço municipal multifuncional dedicado à juventude de Vizela.",
+      "inLanguage": "pt-PT",
+      "author": [
+        { "@type": "Person", "name": "Bruno Pereira" },
+        { "@type": "Person", "name": "Francisco Pereira" },
+        { "@type": "Person", "name": "Marco Monteiro" }
+      ],
+      "url": "https://vizelaempreende.pt/"
+    }
+  ]
+}
+</script>
+
+<!-- ====== FONTS ====== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-/* ====== Reset ====== */
+/* ============================================ */
+/*  RESET                                       */
+/* ============================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
@@ -31,25 +91,29 @@ body {
   color: var(--navy);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; }
 
-/* ====== Tokens (sampled from the campaign images) ====== */
+/* ============================================ */
+/*  TOKENS — sampled from the campaign visuals  */
+/* ============================================ */
 :root {
-  --navy:       #0F1F44;
-  --navy-deep:  #08153A;
-  --teal:       #14B5B0;
-  --teal-bright:#1DC8C2;
-  --teal-soft:  #B8E8E6;
-  --bg:         #FFFFFF;
-  --bg-soft:    #F5FAFA;
-  --line:       #E5ECEF;
-  --text-dim:   #5A6B82;
+  --navy:        #0F1F44;
+  --navy-deep:   #08153A;
+  --teal:        #14B5B0;
+  --teal-bright: #1DC8C2;
+  --teal-soft:   #E0F4F3;
+  --teal-mint:   #B8E8E6;
+  --bg:          #FFFFFF;
+  --bg-soft:     #F5FAFA;
+  --line:        #E5ECEF;
+  --text-dim:    #5A6B82;
 
   --pad-x: clamp(1.25rem, 5vw, 4rem);
-  --section-y: clamp(4rem, 9vw, 7rem);
+  --section-y: clamp(4.5rem, 9vw, 7.5rem);
   --max: 1240px;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -57,319 +121,474 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 ::selection { background: var(--teal); color: white; }
 
-/* ====== Container ====== */
 .wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad-x); }
+.wrap--narrow { max-width: 880px; }
 
-/* ====== Top Nav ====== */
+/* ============================================ */
+/*  NAV                                         */
+/* ============================================ */
 .nav {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem var(--pad-x);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color .4s var(--ease);
 }
 .nav.is-scrolled { border-bottom-color: var(--line); }
-.nav__logo { display: block; height: 36px; }
+.nav__logo { display: block; height: 38px; }
 .nav__logo img { height: 100%; width: auto; }
 .nav__cta {
   display: inline-flex; align-items: center; gap: .55rem;
-  background: var(--teal);
-  color: var(--navy);
-  padding: .7rem 1.3rem .7rem 1.4rem;
+  background: var(--teal); color: var(--navy);
+  padding: .75rem 1.4rem; border-radius: 12px;
   font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
-  border-radius: 10px;
-  transition: background .25s var(--ease), transform .25s var(--ease);
   box-shadow: 0 4px 0 var(--navy);
+  transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 .nav__cta:hover { background: var(--teal-bright); transform: translateY(-1px); box-shadow: 0 5px 0 var(--navy); }
 .nav__cta:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--navy); }
-.nav__cta-arrow { font-size: 1rem; line-height: 1; }
 @media (max-width: 480px) {
   .nav__logo { height: 28px; }
   .nav__cta { padding: .55rem 1rem; font-size: .72rem; }
 }
 
-/* ====== Hero ====== */
-.hero {
-  padding-top: clamp(6rem, 12vw, 9rem);
-  padding-bottom: var(--section-y);
-  position: relative; overflow: hidden;
-}
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: center;
-}
-@media (min-width: 880px) { .hero__grid { grid-template-columns: 1fr 1fr; } }
-
-.hero__text { animation: fadeUp .9s var(--ease) both .1s; }
-.hero__kicker {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+/* ============================================ */
+/*  KICKER                                      */
+/* ============================================ */
+.kicker {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .72rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
   color: var(--teal);
-  margin-bottom: 1.5rem;
 }
-.hero__kicker::before { content: ""; width: 24px; height: 2px; background: var(--teal); }
+.kicker::before { content: ""; width: 24px; height: 2px; background: var(--teal); }
+.section--dark .kicker { color: var(--teal-bright); }
 
+/* ============================================ */
+/*  HERO                                        */
+/* ============================================ */
+.hero {
+  position: relative; overflow: hidden;
+  padding-top: clamp(7rem, 14vw, 11rem);
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+/* Campaign-style geometric accents */
+.hero__dots {
+  position: absolute; top: 7rem; right: clamp(1rem, 5vw, 4rem);
+  width: 110px; height: 80px;
+  background-image: radial-gradient(circle, var(--teal) 1.5px, transparent 2px);
+  background-size: 16px 16px;
+  opacity: 0.55;
+  display: none;
+}
+@media (min-width: 760px) { .hero__dots { display: block; } }
+.hero__blob {
+  position: absolute; bottom: -120px; left: -120px;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: var(--teal-soft);
+  z-index: 0;
+}
+.hero__blob-2 {
+  position: absolute; top: 30%; right: -200px;
+  width: 460px; height: 460px; border-radius: 50%;
+  background: radial-gradient(circle, var(--teal-mint) 0%, transparent 70%);
+  opacity: 0.5;
+  z-index: 0;
+}
+.hero__triangle {
+  position: absolute; top: 14rem; right: 8%;
+  width: 0; height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 70px solid var(--teal);
+  opacity: 0.85;
+  display: none;
+}
+@media (min-width: 880px) { .hero__triangle { display: block; } }
+
+.hero__content { position: relative; z-index: 1; text-align: center; }
+.hero__kicker { margin-bottom: 2rem; animation: fadeUp 1s var(--ease) both .1s; justify-content: center; }
 .hero__title {
-  font-weight: 800;
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  font-weight: 900;
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  line-height: .95; letter-spacing: -0.035em;
   color: var(--navy);
+  animation: fadeUp 1s var(--ease) both .2s;
 }
 .hero__title em {
   font-style: normal;
   color: var(--teal);
+  display: block;
 }
 .hero__sub {
-  margin-top: 1.4rem;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  max-width: 36ch; margin-inline: auto;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 500;
   color: var(--text-dim);
-  max-width: 30ch;
-  font-weight: 400;
-  line-height: 1.55;
+  animation: fadeUp 1s var(--ease) both .4s;
 }
 .hero__cta-row {
-  margin-top: clamp(2rem, 4vw, 2.8rem);
-  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+  animation: fadeUp 1s var(--ease) both .55s;
 }
 .btn-primary {
   display: inline-flex; align-items: center; gap: .7rem;
-  background: var(--teal);
-  color: var(--navy);
-  padding: 1.1rem 1.9rem;
-  font-size: .88rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
-  border-radius: 14px;
+  background: var(--teal); color: var(--navy);
+  padding: 1.15rem 2rem; border-radius: 14px;
+  font-size: .92rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   box-shadow: 0 5px 0 var(--navy);
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
 }
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 0 var(--navy);
-  background: var(--teal-bright);
-}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--navy); background: var(--teal-bright); }
 .btn-primary:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--navy); }
 .btn-primary svg { width: 16px; height: 16px; }
-
 .btn-ghost {
-  font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
   color: var(--navy);
   border-bottom: 2px solid var(--teal);
   padding-bottom: 3px;
-  transition: color .2s, border-color .2s;
+  transition: color .2s;
 }
 .btn-ghost:hover { color: var(--teal); }
 
-.hero__image {
-  animation: fadeUp 1s var(--ease) both .35s;
+/* ============================================ */
+/*  SECTION BASE                                */
+/* ============================================ */
+.section {
+  padding-block: var(--section-y);
+  position: relative;
+  scroll-margin-top: 80px;
 }
-.hero__image img {
-  width: 100%; height: auto; border-radius: 18px;
-  box-shadow: 0 30px 60px -25px rgba(15, 31, 68, 0.25);
-}
-
-/* ====== Section base ====== */
-.section { padding-block: var(--section-y); position: relative; scroll-margin-top: 80px; }
 .section--soft { background: var(--bg-soft); }
 .section--dark { background: var(--navy); color: white; }
 
 .section__head {
-  max-width: 44rem;
-  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  max-width: 56rem; margin: 0 auto clamp(2.5rem, 5vw, 4rem);
   text-align: center;
 }
-.kicker {
-  display: inline-flex; align-items: center; gap: .55rem;
-  font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--teal);
-}
-.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
-.section--dark .kicker { color: var(--teal-bright); }
-
 .section__title {
   margin-top: 1rem;
   font-weight: 800;
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  line-height: 1.05; letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.04; letter-spacing: -0.025em;
   color: inherit;
 }
-.section__title em {
-  font-style: normal;
-  color: var(--teal);
-}
+.section__title em { font-style: normal; color: var(--teal); }
 .section--dark .section__title em { color: var(--teal-bright); }
+.section__sub {
+  margin-top: 1.1rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--text-dim);
+  max-width: 44ch; margin-inline: auto;
+  font-weight: 500;
+}
+.section--dark .section__sub { color: rgba(255, 255, 255, 0.65); }
 
-/* ====== Image showcase (single full image) ====== */
-.showcase {
-  display: flex; justify-content: center;
-}
-.showcase__frame {
-  max-width: 760px; width: 100%;
-  border-radius: 22px; overflow: hidden;
-  background: white;
-  box-shadow: 0 40px 80px -30px rgba(15, 31, 68, 0.3),
-              0 0 0 1px var(--line);
-  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
-}
-.showcase__frame:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 50px 90px -25px rgba(15, 31, 68, 0.35),
-              0 0 0 1px var(--line);
-}
-.showcase__frame img { width: 100%; display: block; }
-
-/* ====== Split layout (image one side, supporting bits other) ====== */
-.split {
-  display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 4vw, 4rem);
-  align-items: center;
-}
-@media (min-width: 880px) { .split { grid-template-columns: 1fr 1fr; } }
-.split--reverse .split__image { order: 1; }
-@media (min-width: 880px) {
-  .split--reverse .split__image { order: 2; }
-  .split--reverse .split__text { order: 1; }
-}
-.split__image {
-  border-radius: 20px; overflow: hidden;
-  box-shadow: 0 30px 70px -25px rgba(15, 31, 68, 0.3),
-              0 0 0 1px var(--line);
-}
-.split__image img { width: 100%; display: block; }
-.split__title {
-  font-weight: 800;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.08; letter-spacing: -0.02em;
-  color: inherit;
-}
-.split__title em { font-style: normal; color: var(--teal); }
-.split--dark .split__title em { color: var(--teal-bright); }
-.split__sub {
-  margin-top: 1rem;
-  font-size: 1rem; color: var(--text-dim);
-  font-weight: 400;
-  max-width: 32ch;
-}
-.split--dark .split__sub { color: rgba(255,255,255,0.7); }
-
-/* ====== Activity chips (under atividades image) ====== */
-.chips {
+/* ============================================ */
+/*  PROPOSTA — three pillars                    */
+/* ============================================ */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
   margin-top: clamp(2rem, 4vw, 3rem);
-  display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center;
 }
-.chip {
-  display: inline-flex; align-items: center; gap: .5rem;
-  padding: .6rem 1.1rem;
-  border-radius: 999px;
+@media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
+.pillar {
   background: white;
   border: 1px solid var(--line);
-  font-size: .85rem; font-weight: 600;
-  color: var(--navy);
-  transition: border-color .25s, background .25s, transform .25s;
+  border-radius: 18px;
+  padding: clamp(1.8rem, 3vw, 2.4rem);
+  position: relative; overflow: hidden;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
 }
-.chip:hover {
+.pillar:hover {
+  transform: translateY(-4px);
   border-color: var(--teal);
+  box-shadow: 0 18px 40px -18px rgba(20, 181, 176, 0.35);
+}
+.pillar__num {
+  font-weight: 900; font-size: 3rem; line-height: 1;
+  color: var(--teal-mint);
+  letter-spacing: -0.04em;
+}
+.pillar__title {
+  margin-top: 1rem;
+  font-weight: 800; font-size: 1.5rem;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.pillar__desc {
+  margin-top: .5rem;
+  font-size: .95rem; color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ============================================ */
+/*  ATIVIDADES — 6 tile grid                    */
+/* ============================================ */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+@media (max-width: 880px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .tiles { grid-template-columns: 1fr; } }
+.tile {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem;
+  display: flex; align-items: center; gap: 1rem;
+  transition: background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.tile:hover {
   background: var(--teal-soft);
+  border-color: var(--teal);
   transform: translateY(-2px);
 }
-.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.tile__icon {
+  width: 44px; height: 44px;
+  background: var(--teal-soft);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+  transition: background .3s var(--ease);
+}
+.tile:hover .tile__icon { background: white; }
+.tile__icon svg { width: 22px; height: 22px; }
+.tile__label {
+  font-weight: 700; font-size: 1.05rem; color: var(--navy);
+}
 
-/* ====== Vote section (final CTA) ====== */
+/* ============================================ */
+/*  PARA QUEM — 5 audiences row                 */
+/* ============================================ */
+.audience {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+@media (max-width: 880px) { .audience { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .audience { grid-template-columns: repeat(2, 1fr); } }
+.aud {
+  text-align: center;
+  padding: 1.6rem 1rem;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition: border-color .3s, background .3s, transform .3s;
+}
+.aud:hover {
+  border-color: var(--line);
+  background: white;
+  transform: translateY(-3px);
+}
+.aud__num {
+  display: inline-block;
+  font-size: .68rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal);
+  padding: .3rem .65rem; border-radius: 999px;
+  background: var(--teal-soft);
+}
+.aud__name {
+  margin-top: .9rem;
+  font-weight: 800; font-size: 1.2rem;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.aud__desc {
+  margin-top: .3rem;
+  font-size: .82rem; line-height: 1.5;
+  color: var(--text-dim);
+}
+
+/* ============================================ */
+/*  STAT BLOCK — 4.819                          */
+/* ============================================ */
+.stat {
+  background: var(--navy);
+  color: white;
+  border-radius: 22px;
+  padding: clamp(2.5rem, 5vw, 4rem);
+  position: relative; overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+@media (max-width: 720px) { .stat { grid-template-columns: 1fr; text-align: center; } }
+.stat::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 90% 20%, rgba(20, 181, 176, 0.18) 0%, transparent 50%);
+  pointer-events: none;
+}
+.stat__num {
+  font-weight: 900;
+  font-size: clamp(5rem, 12vw, 9rem);
+  line-height: .85; letter-spacing: -0.045em;
+  color: var(--teal-bright);
+  position: relative;
+}
+.stat__text {
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 32ch;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+.stat__text strong { color: white; font-weight: 700; }
+
+/* ============================================ */
+/*  COMO VOTAR — 3 info cards                   */
+/* ============================================ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+@media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+.step {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.8rem;
+  position: relative;
+  transition: border-color .3s, transform .3s;
+}
+.step:hover { border-color: var(--teal); transform: translateY(-3px); }
+.step__label {
+  font-size: .72rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--teal);
+}
+.step__value {
+  margin-top: .7rem;
+  font-weight: 800; font-size: 1.6rem; color: var(--navy);
+  letter-spacing: -0.015em;
+}
+.step__detail {
+  margin-top: .4rem;
+  font-size: .92rem; color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* ============================================ */
+/*  FINAL CTA — dark                            */
+/* ============================================ */
 .final {
   background: var(--navy);
   color: white;
-  position: relative; overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
+/* Campaign-style diagonal stripe */
 .final::before {
-  content: ""; position: absolute; top: -30%; right: -10%;
-  width: 60%; height: 120%;
-  background: radial-gradient(circle, rgba(20, 181, 176, 0.18) 0%, transparent 60%);
-  pointer-events: none;
+  content: ""; position: absolute;
+  top: -10%; right: -5%;
+  width: 240px; height: 130%;
+  background: var(--navy-deep);
+  transform: rotate(15deg);
 }
-.final__wrap { position: relative; z-index: 1; text-align: center; max-width: 52rem; margin: 0 auto; }
+.final::after {
+  content: ""; position: absolute;
+  top: -10%; right: 12%;
+  width: 25px; height: 130%;
+  background: var(--teal);
+  transform: rotate(15deg);
+}
+.final__wrap { position: relative; z-index: 1; text-align: center; max-width: 56rem; margin: 0 auto; }
 .final__title {
-  font-weight: 800;
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
-  line-height: 1.02; letter-spacing: -0.025em;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 6.5vw, 5rem);
+  line-height: 1.02; letter-spacing: -0.03em;
   color: white;
 }
-.final__title em { font-style: normal; color: var(--teal-bright); }
+.final__title em {
+  font-style: normal;
+  color: var(--teal-bright);
+  display: block;
+}
 .final__sub {
   margin-top: 1.3rem;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 400;
-  max-width: 28rem; margin-inline: auto;
+  font-weight: 500;
+  max-width: 30rem; margin-inline: auto;
 }
 .final__cta {
-  display: inline-flex; align-items: center; gap: .7rem;
-  background: var(--teal);
-  color: var(--navy-deep);
-  padding: 1.3rem 2.3rem;
-  font-size: 1rem; font-weight: 800; letter-spacing: .04em;
+  display: inline-flex; align-items: center; gap: .8rem;
+  background: var(--teal); color: var(--navy-deep);
+  padding: 1.4rem 2.6rem;
+  font-size: 1.05rem; font-weight: 800; letter-spacing: .04em;
   border-radius: 16px;
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
-  box-shadow: 0 6px 0 #0A8B87, 0 12px 40px rgba(20, 181, 176, 0.4);
+  box-shadow: 0 6px 0 #0A8B87, 0 14px 40px rgba(20, 181, 176, 0.4);
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
 }
 .final__cta:hover {
   background: var(--teal-bright);
   transform: translateY(-2px);
-  box-shadow: 0 8px 0 #0A8B87, 0 16px 50px rgba(20, 181, 176, 0.5);
+  box-shadow: 0 8px 0 #0A8B87, 0 18px 50px rgba(20, 181, 176, 0.5);
 }
 .final__cta:active { transform: translateY(4px); box-shadow: 0 2px 0 #0A8B87, 0 8px 30px rgba(20, 181, 176, 0.4); }
 .final__cta svg { width: 18px; height: 18px; }
 
-.final__info {
+.final__authors {
   margin-top: clamp(3rem, 6vw, 4.5rem);
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
-  padding-top: 2.5rem;
+  padding-top: clamp(2rem, 4vw, 3rem);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
-@media (max-width: 720px) { .final__info { grid-template-columns: 1fr; gap: 1.5rem; } }
-.final__info-item { text-align: center; }
-.final__info-label {
-  font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+.final__authors-label {
+  font-size: .7rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
   color: var(--teal-bright);
 }
-.final__info-value {
-  margin-top: .55rem;
-  font-weight: 800; font-size: 1.05rem; color: white;
+.final__authors-names {
+  margin-top: 1rem;
+  display: flex; gap: clamp(1.5rem, 4vw, 3rem); justify-content: center; flex-wrap: wrap;
 }
-.final__info-detail {
-  margin-top: .25rem;
-  font-size: .85rem; color: rgba(255, 255, 255, 0.55);
+.final__author {
+  font-weight: 700; font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: white;
 }
 
-/* ====== Footer ====== */
+/* ============================================ */
+/*  FOOTER                                      */
+/* ============================================ */
 .footer {
   background: var(--navy-deep);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
   padding: 2.2rem var(--pad-x);
-  font-size: .8rem;
+  font-size: .82rem;
 }
 .footer__wrap {
   max-width: var(--max); margin-inline: auto;
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
 }
-.footer__logo { height: 28px; }
+.footer__brand { display: flex; align-items: center; gap: 1rem; }
+.footer__logo { height: 32px; }
 .footer__logo img { height: 100%; width: auto; }
+.footer__url { font-weight: 700; color: white; letter-spacing: .02em; }
+.footer__url:hover { color: var(--teal-bright); }
 
-/* ====== Reveal animation ====== */
+/* ============================================ */
+/*  REVEAL ANIMATION                            */
+/* ============================================ */
 [data-reveal] {
   opacity: 0; transform: translateY(24px);
   transition: opacity .9s var(--ease), transform .9s var(--ease);
 }
 [data-reveal].is-visible { opacity: 1; transform: none; }
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: none; }
 }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
@@ -381,44 +600,57 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 <!-- ============== NAV ============== -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__logo" aria-label="Vizela Empreende — início">
-    <img src="logo.png" alt="Vizela Empreende" />
+    <img src="logo.png" alt="Vizela Empreende" width="120" height="38" />
   </a>
-  <a href="#votar" class="nav__cta">Vota <span class="nav__cta-arrow">›</span></a>
+  <a href="#votar" class="nav__cta">Vota ›</a>
 </nav>
 
 <!-- ============== HERO ============== -->
 <header class="hero" id="top">
-  <div class="wrap">
-    <div class="hero__grid">
-      <div class="hero__text">
-        <span class="hero__kicker">OPJ 2026</span>
-        <h1 class="hero__title">Cria <em>mais</em>.<br/>Em Vizela.</h1>
-        <p class="hero__sub">Vota a proposta que dá aos jovens o espaço que sempre lhes faltou.</p>
-        <div class="hero__cta-row">
-          <a href="#votar" class="btn-primary">
-            Vota Vizela Empreende
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#pergunta" class="btn-ghost">Ver proposta</a>
-        </div>
-      </div>
-      <figure class="hero__image">
-        <img src="img-hero.jpg" alt="Vizela Empreende — um espaço para ideias, projetos e futuro" />
-      </figure>
+  <div class="hero__blob" aria-hidden="true"></div>
+  <div class="hero__blob-2" aria-hidden="true"></div>
+  <div class="hero__dots" aria-hidden="true"></div>
+  <div class="hero__triangle" aria-hidden="true"></div>
+
+  <div class="wrap hero__content">
+    <span class="kicker hero__kicker">Orçamento Participativo Jovem · 2026</span>
+    <h1 class="hero__title">Cria mais.<em>Em Vizela.</em></h1>
+    <p class="hero__sub">Uma proposta para criar um espaço onde os jovens de Vizela podem aprender, criar e experimentar.</p>
+    <div class="hero__cta-row">
+      <a href="#votar" class="btn-primary">
+        Vota Vizela Empreende
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#proposta" class="btn-ghost">Ver proposta</a>
     </div>
   </div>
 </header>
 
-<!-- ============== PERGUNTA ============== -->
-<section class="section section--soft" id="pergunta">
+<!-- ============== PROPOSTA — 3 PILARES ============== -->
+<section class="section section--soft" id="proposta">
   <div class="wrap">
-    <div class="section__head" data-reveal>
-      <span class="kicker">A pergunta</span>
-    </div>
-    <div class="showcase" data-reveal>
-      <figure class="showcase__frame">
-        <img src="img-pergunta.jpg" alt="Onde podem os jovens de Vizela criar mais?" />
-      </figure>
+    <header class="section__head" data-reveal>
+      <span class="kicker">A proposta</span>
+      <h2 class="section__title">Um espaço para <em>criar mais</em>.</h2>
+      <p class="section__sub">Um lugar municipal, multifuncional e aberto à juventude — pensado para três coisas.</p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar" data-reveal>
+        <div class="pillar__num">01</div>
+        <h3 class="pillar__title">Aprender</h3>
+        <p class="pillar__desc">Workshops, formações e competências que a escola não dá.</p>
+      </article>
+      <article class="pillar" data-reveal>
+        <div class="pillar__num">02</div>
+        <h3 class="pillar__title">Criar</h3>
+        <p class="pillar__desc">Transformar ideias em projetos — com tempo, espaço e ferramentas.</p>
+      </article>
+      <article class="pillar" data-reveal>
+        <div class="pillar__num">03</div>
+        <h3 class="pillar__title">Experimentar</h3>
+        <p class="pillar__desc">Testar marcas, lançar conteúdos, encontrar os primeiros clientes.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -426,22 +658,36 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 <!-- ============== ATIVIDADES ============== -->
 <section class="section" id="atividades">
   <div class="wrap">
-    <div class="section__head" data-reveal>
-      <span class="kicker">O espaço</span>
-      <h2 class="section__title">O que pode acontecer <em>aqui</em>.</h2>
-    </div>
-    <div class="showcase" data-reveal>
-      <figure class="showcase__frame">
-        <img src="img-atividades.jpg" alt="IA, eSports, Conteúdos, Workshops" />
-      </figure>
-    </div>
-    <div class="chips" data-reveal>
-      <span class="chip"><span class="chip__dot"></span>IA</span>
-      <span class="chip"><span class="chip__dot"></span>eSports</span>
-      <span class="chip"><span class="chip__dot"></span>Conteúdos</span>
-      <span class="chip"><span class="chip__dot"></span>Workshops</span>
-      <span class="chip"><span class="chip__dot"></span>Projetos</span>
-      <span class="chip"><span class="chip__dot"></span>Comunidade</span>
+    <header class="section__head" data-reveal>
+      <span class="kicker">O que acontece aqui</span>
+      <h2 class="section__title">Atividades para <em>todos</em>.</h2>
+    </header>
+
+    <div class="tiles">
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="8.5" cy="12.5" r="1"/><circle cx="15.5" cy="12.5" r="1"/><path d="M9 17h6"/></svg></span>
+        <span class="tile__label">IA &amp; Tecnologia</span>
+      </article>
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h4M8 10v4"/><circle cx="15" cy="11" r="1"/><circle cx="17" cy="13" r="1"/><rect x="2" y="7" width="20" height="11" rx="5.5"/></svg></span>
+        <span class="tile__label">eSports &amp; Gaming</span>
+      </article>
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="m17 9 4-2v10l-4-2"/></svg></span>
+        <span class="tile__label">Criação de Conteúdos</span>
+      </article>
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+        <span class="tile__label">Workshops</span>
+      </article>
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 4 12.6V17H8v-2.4A7 7 0 0 1 12 2z"/></svg></span>
+        <span class="tile__label">Projetos &amp; Ideias</span>
+      </article>
+      <article class="tile" data-reveal>
+        <span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2zM7 16H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h2"/><path d="M7 8v8h10V8z"/><path d="M11 12h2"/></svg></span>
+        <span class="tile__label">Eventos &amp; Comunidade</span>
+      </article>
     </div>
   </div>
 </section>
@@ -449,28 +695,78 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 <!-- ============== PARA QUEM ============== -->
 <section class="section section--soft" id="quem">
   <div class="wrap">
-    <div class="section__head" data-reveal>
-      <span class="kicker">A quem serve</span>
-    </div>
-    <div class="showcase" data-reveal>
-      <figure class="showcase__frame">
-        <img src="img-pessoas.jpg" alt="Um espaço para jovens, escolas e associações" />
-      </figure>
+    <header class="section__head" data-reveal>
+      <span class="kicker">Para quem</span>
+      <h2 class="section__title">Não é só para os jovens.<br/>É para <em>toda a Vizela</em>.</h2>
+    </header>
+
+    <div class="audience">
+      <div class="aud" data-reveal>
+        <span class="aud__num">01</span>
+        <h3 class="aud__name">Jovens</h3>
+        <p class="aud__desc">Estudar, criar e desenvolver projetos.</p>
+      </div>
+      <div class="aud" data-reveal>
+        <span class="aud__num">02</span>
+        <h3 class="aud__name">Escolas</h3>
+        <p class="aud__desc">Atividades, apresentações e parcerias.</p>
+      </div>
+      <div class="aud" data-reveal>
+        <span class="aud__num">03</span>
+        <h3 class="aud__name">Associações</h3>
+        <p class="aud__desc">Reuniões, eventos e dinamização local.</p>
+      </div>
+      <div class="aud" data-reveal>
+        <span class="aud__num">04</span>
+        <h3 class="aud__name">Empresas</h3>
+        <p class="aud__desc">Mentorias e ligação ao talento jovem.</p>
+      </div>
+      <div class="aud" data-reveal>
+        <span class="aud__num">05</span>
+        <h3 class="aud__name">Comunidade</h3>
+        <p class="aud__desc">Mais encontros, mais ideias, mais Vizela.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============== VÍDEO ============== -->
-<section class="section" id="video">
-  <div class="wrap">
-    <div class="section__head" data-reveal>
-      <span class="kicker">Brevemente</span>
-      <h2 class="section__title">Vídeo de <em>apresentação</em>.</h2>
+<!-- ============== STAT BLOCK ============== -->
+<section class="section">
+  <div class="wrap wrap--narrow">
+    <div class="stat" data-reveal>
+      <div class="stat__num">4.819</div>
+      <p class="stat__text">
+        <strong>jovens vivem em Vizela,</strong> entre os 12 e os 30 anos.
+        Esta proposta é por eles — e por ti.
+      </p>
     </div>
-    <div class="showcase" data-reveal>
-      <figure class="showcase__frame">
-        <img src="img-video.jpg" alt="Vídeo de apresentação — em breve" />
-      </figure>
+  </div>
+</section>
+
+<!-- ============== COMO VOTAR ============== -->
+<section class="section section--soft" id="votar-info">
+  <div class="wrap">
+    <header class="section__head" data-reveal>
+      <span class="kicker">Como votar</span>
+      <h2 class="section__title">Três coisas que precisas de <em>saber</em>.</h2>
+    </header>
+
+    <div class="steps">
+      <article class="step" data-reveal>
+        <div class="step__label">Quem</div>
+        <div class="step__value">Jovens 12 — 30</div>
+        <p class="step__detail">Que vivam, estudem ou sejam naturais de Vizela.</p>
+      </article>
+      <article class="step" data-reveal>
+        <div class="step__label">Onde</div>
+        <div class="step__value">Online &amp; Escolas</div>
+        <p class="step__detail">Pelo formulário oficial do município ou nas urnas escolares.</p>
+      </article>
+      <article class="step" data-reveal>
+        <div class="step__label">Quando</div>
+        <div class="step__value">OPJ 2026</div>
+        <p class="step__detail">Durante o período oficial de votação anunciado pela Câmara.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -479,29 +775,20 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 <section class="section final" id="votar">
   <div class="wrap final__wrap">
     <span class="kicker" data-reveal>Chamada à ação</span>
-    <h2 class="final__title" data-reveal>O teu voto pode <em>criar este espaço</em>.</h2>
+    <h2 class="final__title" data-reveal>O teu voto pode<em>criar este espaço.</em></h2>
     <p class="final__sub" data-reveal>A tua escolha faz a diferença.</p>
 
     <a href="#" class="final__cta" data-reveal>
       Vota Vizela Empreende
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
 
-    <div class="final__info">
-      <div class="final__info-item" data-reveal>
-        <div class="final__info-label">Quem</div>
-        <div class="final__info-value">Jovens 12 — 30</div>
-        <p class="final__info-detail">Vives, estudas ou és de Vizela.</p>
-      </div>
-      <div class="final__info-item" data-reveal>
-        <div class="final__info-label">Onde</div>
-        <div class="final__info-value">Online · Escolas</div>
-        <p class="final__info-detail">Formulário oficial e urnas.</p>
-      </div>
-      <div class="final__info-item" data-reveal>
-        <div class="final__info-label">Quando</div>
-        <div class="final__info-value">OPJ 2026</div>
-        <p class="final__info-detail">Durante o período oficial.</p>
+    <div class="final__authors" data-reveal>
+      <div class="final__authors-label">Uma proposta de</div>
+      <div class="final__authors-names">
+        <span class="final__author">Bruno Pereira</span>
+        <span class="final__author">Francisco Pereira</span>
+        <span class="final__author">Marco Monteiro</span>
       </div>
     </div>
   </div>
@@ -510,8 +797,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 <!-- ============== FOOTER ============== -->
 <footer class="footer">
   <div class="footer__wrap">
-    <div class="footer__logo"><img src="logo_white.png" alt="Vizela Empreende" /></div>
-    <div>Proposta de Bruno Pereira, Francisco Pereira e Marco Monteiro · OPJ 2026</div>
+    <div class="footer__brand">
+      <div class="footer__logo"><img src="logo_white.png" alt="Vizela Empreende" width="100" height="32" /></div>
+      <a href="https://vizelaempreende.pt/" class="footer__url">vizelaempreende.pt</a>
+    </div>
+    <div>Orçamento Participativo Jovem · Vizela 2026</div>
   </div>
 </footer>
 
