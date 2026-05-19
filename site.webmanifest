@@ -1,0 +1,17 @@
+{
+  "name": "Vizela Empreende",
+  "short_name": "Vizela Empreende",
+  "description": "Proposta ao Orçamento Participativo Jovem 2026 — um espaço para aprender, criar e experimentar em Vizela.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAFBFD",
+  "theme_color": "#0F1F44",
+  "lang": "pt-PT",
+  "icons": [
+    { "src": "favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}
