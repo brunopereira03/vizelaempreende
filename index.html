@@ -112,7 +112,7 @@
     backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
     border-bottom:1px solid var(--line);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px}
   .nav .logo img{height:42px;width:auto}
   .nav-cta{
     display:inline-flex;align-items:center;gap:6px;
@@ -123,6 +123,15 @@
   .nav-cta:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 
   /* Hero */
+  .hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .lead{ margin-left:auto; margin-right:auto; }
+  .hero .cta-stack{ align-items: center; } 
   .hero{padding:72px 0 80px;position:relative;overflow:hidden}
   .hero::before{
     content:"";position:absolute;inset:0;z-index:-1;
@@ -374,7 +383,7 @@
 <section aria-labelledby="publicos-title">
   <div class="container">
     <p class="kicker">Para quem</p>
-    <h2 id="publicos-title">Não é só para os jovens.<br>É para <em>toda a Vizela</em>.</h2>
+    <h2 id="publicos-title">Não é só para os jovens.<br>É para <em>todos os Vizelenses</em>.</h2>
 
     <div class="publics">
       <article class="public">
@@ -434,7 +443,7 @@
       <article class="how-card">
         <span class="how-label">Quando</span>
         <h3>OPJ 2026</h3>
-        <p>Durante o período oficial de votação anunciado pela Câmara.</p>
+        <p>Até dia 14 de junho.</p>
       </article>
     </div>
   </div>
